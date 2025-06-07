@@ -1,0 +1,12 @@
+jthread is only supported by c++ 20, so designate the version when compling if you want to use jthread
+conmand line: g++ -std=c++20 -pthread play_thread.cpp -o play_thread
+
+Launch a static server
+(just a simple http server to serve static resource files from a local directory
+ unable to handle dynamic requests such as CRUD operations):
+python -m http.server 8000
+
+To realize a biconditional-communication between client and server:
+1. Custom the BaseHTTPRequestHandler.
+2. Design a service supporting GET/POST.
+3. The client use fetch('http://localhost:8000/something') to call the server.
