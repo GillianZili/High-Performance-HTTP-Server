@@ -20,6 +20,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
         self.wfile.write(html_content)
+        print("Get requests received successfully.")
 
 
     def do_POST(self):
